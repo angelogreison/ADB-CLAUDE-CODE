@@ -422,10 +422,10 @@ section{padding:110px 0;position:relative;}
 }
 .faq-q .plus{font-size:1.4rem;color:var(--petroleum);transition:transform .4s var(--ease);}
 .faq-item.open .plus{transform:rotate(45deg);}
-.faq-item{transition:background .3s var(--ease);}
-.faq-item:hover{background:var(--cream);}
+.faq-q:focus{outline:none;}
+.faq-q:focus-visible{outline:2px solid var(--terracotta);outline-offset:2px;border-radius:4px;}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease);}
-.faq-item.open .faq-a{max-height:260px;}
+.faq-item.open .faq-a{max-height:420px;}
 .faq-a p{padding:0 4px 24px;opacity:.85;font-size:.92rem;line-height:1.65;color:var(--ink);}
 
 /* ---------- FOOTER ---------- */
