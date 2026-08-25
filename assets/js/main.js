@@ -5,6 +5,18 @@
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
   }, { passive: true });
 
+  // Sticky CTA: only appears after fully scrolling past the hero
+  var stickyCta = document.querySelector('.sticky-cta');
+  var heroEl = document.getElementById('scroll-hero') || document.querySelector('.page-hero') || document.querySelector('.error-page');
+  if (stickyCta && heroEl) {
+    var toggleSticky = function () {
+      var heroBottom = heroEl.getBoundingClientRect().bottom;
+      stickyCta.classList.toggle('visible', heroBottom <= 0);
+    };
+    window.addEventListener('scroll', toggleSticky, { passive: true });
+    toggleSticky();
+  }
+
   // Mobile menu
   var burger = document.getElementById('burger');
   var menu = document.getElementById('mobileMenu');
