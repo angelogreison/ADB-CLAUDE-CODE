@@ -394,7 +394,7 @@ section{padding:110px 0;position:relative;}
 .final-cta{
   position:relative;padding:130px 0;text-align:center;overflow:hidden;
   background:
-    linear-gradient(160deg, rgba(61,43,31,.82), rgba(176,74,51,.78)),
+    linear-gradient(160deg, rgba(61,43,31,.82), rgba(61,43,31,.68)),
     url('../gallery-1.webp') center/cover no-repeat;
 }
 .final-cta h2{position:relative;font-size:clamp(2.2rem,6vw,3.6rem);color:var(--white);margin-bottom:18px;}
