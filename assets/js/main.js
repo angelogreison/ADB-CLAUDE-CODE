@@ -57,58 +57,14 @@
     });
   });
 
-  /* ---------- SCROLL-DRIVEN VIDEO HERO ---------- */
+  /* ---------- HERO VIDEO (autoplay loop) ---------- */
   var video = document.getElementById('heroVideo');
-  var hero = document.getElementById('scroll-hero');
-  var progressFill = document.getElementById('progressFill');
-
-  if (video && hero) {
-    var isMobile = window.matchMedia('(max-width: 768px)').matches;
-    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
+  if (video) {
     video.addEventListener('loadeddata', function () { video.classList.add('ready'); });
-
-    if (isMobile || prefersReduced) {
-      video.autoplay = true;
-      video.loop = true;
-      video.muted = true;
-      video.play().catch(function () {});
-    } else {
-      video.pause();
-      video.currentTime = 0;
-      var isReady = false;
-      video.addEventListener('loadedmetadata', function () { isReady = true; });
-      video.load();
-
-      var updateVideo = function () {
-        if (!isReady || !video.duration) return;
-        var rect = hero.getBoundingClientRect();
-        var scrolled = -rect.top;
-        var scrollable = hero.offsetHeight - window.innerHeight;
-        if (scrolled <= 0) {
-          video.currentTime = 0;
-          if (progressFill) progressFill.style.width = '0%';
-          return;
-        }
-        if (scrolled >= scrollable) {
-          video.currentTime = video.duration;
-          if (progressFill) progressFill.style.width = '100%';
-          return;
-        }
-        var progress = scrolled / scrollable;
-        video.currentTime = progress * video.duration;
-        if (progressFill) progressFill.style.width = (progress * 100) + '%';
-      };
-
-      var ticking = false;
-      window.addEventListener('scroll', function () {
-        if (!ticking) {
-          requestAnimationFrame(function () { updateVideo(); ticking = false; });
-          ticking = true;
-        }
-      }, { passive: true });
-      window.addEventListener('resize', updateVideo);
-    }
+    video.autoplay = true;
+    video.loop = true;
+    video.muted = true;
+    video.play().catch(function () {});
   }
 
   /* ---------- SCHEDULE BOOKING MODAL ---------- */

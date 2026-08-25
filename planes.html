@@ -5,11 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Planes y Horarios — Artesana del Barro</title>
 <meta name="description" content="Planes de cerámica desde $79.000/mes. Horarios de lunes a sábado. Servicio de horneadas para ceramistas en Caballito y Almagro.">
+<link rel="canonical" href="https://artesanadelbarro.com.ar/planes.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Artesana del Barro">
+<meta property="og:title" content="Planes y Horarios — Artesana del Barro">
+<meta property="og:description" content="Planes de cerámica desde $79.000/mes. Horarios de lunes a sábado. Servicio de horneadas para ceramistas en Caballito y Almagro.">
+<meta property="og:url" content="https://artesanadelbarro.com.ar/planes.html">
+<meta property="og:image" content="https://artesanadelbarro.com.ar/assets/gallery-4.webp">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Planes y Horarios — Artesana del Barro">
+<meta name="twitter:description" content="Planes de cerámica desde $79.000/mes. Horarios de lunes a sábado en Caballito y Almagro.">
+<meta name="twitter:image" content="https://artesanadelbarro.com.ar/assets/gallery-4.webp">
+
 <link rel="icon" href="assets/favicon.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=8">
+<link rel="stylesheet" href="assets/css/style.css?v=13">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YOUR_MEASUREMENT_ID');
+</script>
+
+<!-- Schema.org: Breadcrumbs -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://artesanadelbarro.com.ar/"},
+    {"@type": "ListItem", "position": 2, "name": "Planes y Horarios", "item": "https://artesanadelbarro.com.ar/planes.html"}
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -19,6 +54,7 @@
     <ul class="nav-links">
       <li><a href="index.html#taller">El Taller</a></li>
       <li><a href="planes.html">Planes</a></li>
+      <li><a href="planes.html#horarios">Horarios</a></li>
       <li><a href="planes.html#horneadas">Horneadas</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
@@ -35,6 +71,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html#taller">El Taller</a>
   <a href="planes.html">Planes</a>
+  <a href="planes.html#horarios">Horarios</a>
   <a href="planes.html#horneadas">Horneadas</a>
   <a href="contacto.html">Contacto</a>
   <a href="https://wa.me/5491156206435" target="_blank" style="color:var(--terracotta)">WhatsApp →</a>
@@ -42,6 +79,9 @@
 
 <section class="page-hero">
   <div class="container reveal in">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Inicio</a><span class="sep">/</span><span class="current">Planes y Horarios</span>
+    </nav>
     <span class="eyebrow">Planes y horarios</span>
     <h1>Elegí tu plan creativo</h1>
     <p>Elegí entre el Plan Taller, con modelado manual, y el Plan Fusión, que combina torno alfarero profesional y mesa. Ambos incluyen 4 clases mensuales de 2 horas, pasta y materiales, herramientas, esmaltes y horneadas, además del sistema de recuperación de clases según disponibilidad. Así podés aprender cerámica de forma práctica, crear tus propias piezas y disfrutar el proceso sin preocuparte por comprar materiales adicionales para empezar.</p>
@@ -88,11 +128,11 @@
       <div class="day-col stagger-item">
         <h4>Lunes</h4>
         <div class="slot" data-category="Modelado" data-day="Lunes" data-start="14:00" data-end="16:00" onclick="openScheduleModal(this)"><div class="t">14:00 - 16:00</div><div class="c">Modelado</div><span class="badge b-low">Pocos cupos</span></div>
-        <div class="slot" data-category="Modelado" data-day="Lunes" data-start="18:30" data-end="20:30" onclick="openScheduleModal(this)"><div class="t">18:30 - 20:30</div><div class="c">Modelado</div><span class="badge b-full">Turno completo</span></div>
+        <div class="slot slot-disabled" data-category="Modelado" data-day="Lunes" data-start="18:30" data-end="20:30" aria-disabled="true"><div class="t">18:30 - 20:30</div><div class="c">Modelado</div><span class="badge b-full">Sin cupos</span></div>
       </div>
       <div class="day-col stagger-item">
         <h4>Martes</h4>
-        <div class="slot" data-category="Alfarería" data-day="Martes" data-start="09:30" data-end="11:30" onclick="openScheduleModal(this)"><div class="t">09:30 - 11:30</div><div class="c">Alfarería</div><span class="badge b-full">Turno completo</span></div>
+        <div class="slot slot-disabled" data-category="Alfarería" data-day="Martes" data-start="09:30" data-end="11:30" aria-disabled="true"><div class="t">09:30 - 11:30</div><div class="c">Alfarería</div><span class="badge b-full">Sin cupos</span></div>
         <div class="slot" data-category="Modelado" data-day="Martes" data-start="18:30" data-end="20:30" onclick="openScheduleModal(this)"><div class="t">18:30 - 20:30</div><div class="c">Modelado</div><span class="badge b-last">Último cupo</span></div>
       </div>
       <div class="day-col stagger-item">
@@ -102,22 +142,23 @@
       </div>
       <div class="day-col stagger-item">
         <h4>Jueves</h4>
-        <div class="slot" data-category="Modelado" data-day="Jueves" data-start="15:30" data-end="17:30" onclick="openScheduleModal(this)"><div class="t">15:30 - 17:30</div><div class="c">Modelado</div><span class="badge b-full">Turno completo</span></div>
-        <div class="slot" data-category="Modelado" data-day="Jueves" data-start="18:00" data-end="20:00" onclick="openScheduleModal(this)"><div class="t">18:00 - 20:00</div><div class="c">Modelado</div><span class="badge b-full">Turno completo</span></div>
+        <div class="slot slot-disabled" data-category="Modelado" data-day="Jueves" data-start="15:30" data-end="17:30" aria-disabled="true"><div class="t">15:30 - 17:30</div><div class="c">Modelado</div><span class="badge b-full">Sin cupos</span></div>
+        <div class="slot slot-disabled" data-category="Modelado" data-day="Jueves" data-start="18:00" data-end="20:00" aria-disabled="true"><div class="t">18:00 - 20:00</div><div class="c">Modelado</div><span class="badge b-full">Sin cupos</span></div>
       </div>
       <div class="day-col stagger-item">
         <h4>Viernes</h4>
-        <div class="slot" data-category="Alfarería" data-day="Viernes" data-start="14:00" data-end="16:00" onclick="openScheduleModal(this)"><div class="t">14:00 - 16:00</div><div class="c">Alfarería</div><span class="badge b-full">Turno completo</span></div>
-        <div class="slot" data-category="Modelado" data-day="Viernes" data-start="18:30" data-end="20:30" onclick="openScheduleModal(this)"><div class="t">18:30 - 20:30</div><div class="c">Modelado</div><span class="badge b-full">Turno completo</span></div>
+        <div class="slot slot-disabled" data-category="Alfarería" data-day="Viernes" data-start="14:00" data-end="16:00" aria-disabled="true"><div class="t">14:00 - 16:00</div><div class="c">Alfarería</div><span class="badge b-full">Sin cupos</span></div>
+        <div class="slot slot-disabled" data-category="Modelado" data-day="Viernes" data-start="18:30" data-end="20:30" aria-disabled="true"><div class="t">18:30 - 20:30</div><div class="c">Modelado</div><span class="badge b-full">Sin cupos</span></div>
       </div>
       <div class="day-col stagger-item">
         <h4>Sábado</h4>
-        <div class="slot" data-category="Modelado" data-day="Sábado" data-start="11:00" data-end="13:00" onclick="openScheduleModal(this)"><div class="t">11:00 - 13:00</div><div class="c">Modelado</div><span class="badge b-full">Turno completo</span></div>
-        <div class="slot" data-category="Modelado" data-day="Sábado" data-start="14:00" data-end="16:00" onclick="openScheduleModal(this)"><div class="t">14:00 - 16:00</div><div class="c">Modelado</div><span class="badge b-full">Turno completo</span></div>
+        <div class="slot slot-disabled" data-category="Modelado" data-day="Sábado" data-start="11:00" data-end="13:00" aria-disabled="true"><div class="t">11:00 - 13:00</div><div class="c">Modelado</div><span class="badge b-full">Sin cupos</span></div>
+        <div class="slot slot-disabled" data-category="Modelado" data-day="Sábado" data-start="14:00" data-end="16:00" aria-disabled="true"><div class="t">14:00 - 16:00</div><div class="c">Modelado</div><span class="badge b-full">Sin cupos</span></div>
       </div>
     </div>
     <div class="schedule-note">
       <a href="https://wa.me/5491156206435?text=%C2%A1Hola%20Mariana!%20Estuve%20mirando%20los%20horarios%20pero%20no%20encontr%C3%A9%20uno%20que%20me%20coincida.%20%C2%BFHay%20lista%20de%20espera%3F%20%F0%9F%9D%93" target="_blank" class="btn btn-outline">¿No encontrás tu horario ideal? Consultanos →</a>
+      <p style="margin-top:16px;font-size:.85rem;opacity:.75;">⏱️ Respondemos el mismo día por WhatsApp.</p>
     </div>
   </div>
 </section>
@@ -184,7 +225,8 @@
           <span class="pill">🔥 Gres = Cono 5</span>
           <span class="pill">🎨 Esmaltado para loza</span>
         </div>
-        <p style="font-size:.85rem;opacity:.75;font-style:italic;margin-bottom:26px;">Nota: si llenás el horno, podés elegir la temperatura y la curva que desees.</p>
+        <p style="font-size:.85rem;opacity:.75;font-style:italic;margin-bottom:10px;">Nota: si llenás el horno, podés elegir la temperatura y la curva que desees.</p>
+        <p style="font-size:.85rem;opacity:.75;margin-bottom:26px;">¿Necesitás la <a href="contacto.html" style="color:var(--terracotta);text-decoration:underline;">ubicación y cómo llegar</a>?</p>
         <a href="https://wa.me/5491156206435?text=%C2%A1Hola%20Mariana!%20Quer%C3%ADa%20consultar%20sobre%20costos%20para%20horneadas.%20%F0%9F%94%A5" target="_blank" class="btn btn-wa">
           <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.298-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
           Consultá por WhatsApp
