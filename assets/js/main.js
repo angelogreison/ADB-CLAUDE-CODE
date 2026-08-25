@@ -98,9 +98,9 @@
     var planDisplay = document.getElementById('m-plan-display');
     var cat = selectedSchedule.category.toLowerCase();
     if (cat.indexOf('modelado') !== -1) {
-      planDisplay.innerText = 'Plan Taller ($79.000)';
+      planDisplay.innerText = 'Plan Modelado ($79.000)';
     } else if (cat.indexOf('alfarer') !== -1) {
-      planDisplay.innerText = 'Plan Fusión ($90.000)';
+      planDisplay.innerText = 'Plan Torno ($90.000)';
     } else {
       planDisplay.innerText = 'Consultar Plan';
     }
