@@ -87,7 +87,7 @@ header.nav.scrolled{padding:11px 0;box-shadow:0 10px 30px -14px rgba(61,43,31,.2
 }
 .nav-links a:hover::after{width:100%;}
 .nav-links a:hover{opacity:1;}
-.nav-cta{display:flex;align-items:center;gap:18px;}
+.nav-cta{display:flex;align-items:center;gap:14px;}
 .nav-wa{padding:12px 24px;font-size:.8rem;}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
 .burger span{width:24px;height:2px;background:var(--ink);}
@@ -129,15 +129,15 @@ header.nav.scrolled{padding:11px 0;box-shadow:0 10px 30px -14px rgba(61,43,31,.2
   margin-bottom:22px;
 }
 .hero-content h1 em{color:var(--terracotta-light);font-style:italic;}
-.hero-title-sub::before{content:' | ';}
+.hero-title-sub{
+  display:block;margin-top:10px;font-family:'Montserrat',sans-serif;font-weight:600;
+  font-size:1rem;letter-spacing:1px;text-transform:uppercase;color:var(--terracotta-light);
+}
 @media(min-width:981px){
   .hero-content-inner{max-width:1300px;}
   .hero-content h1{font-size:clamp(2.4rem,4.2vw,3.2rem);line-height:1.15;}
-  .hero-title-sub{
-    display:block;margin-top:16px;font-family:'Montserrat',sans-serif;font-weight:600;
-    font-size:1.5rem;letter-spacing:1px;text-transform:uppercase;color:var(--terracotta-light);
-  }
-  .hero-title-sub::before{content:none;}
+  .hero-break-mobile{display:none;}
+  .hero-title-sub{margin-top:16px;font-size:1.5rem;}
 }
 .hero-content p.subtitle{
   font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.25rem,2.4vw,2rem);font-style:italic;color:var(--cream);
@@ -458,8 +458,10 @@ footer{background:var(--ink);color:var(--cream);padding:70px 0 26px;}
 body{padding-bottom:54px;}
 
 @media(max-width:980px){
-  .nav-links,.nav-cta .nav-wa{display:none;}
+  .nav-links{display:none;}
   .burger{display:flex;}
+  .nav-wa{padding:0;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .nav-wa-label{display:none;}
   .about-grid,.firing-grid,.loc-grid{grid-template-columns:1fr;gap:40px;}
   .why-grid,.services-grid{grid-template-columns:repeat(2,1fr);}
   .pricing-grid{grid-template-columns:1fr;}
