@@ -118,7 +118,7 @@ header.nav.scrolled{padding:11px 0;box-shadow:0 10px 30px -14px rgba(61,43,31,.2
 }
 .hero-content{
   position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;padding:130px 20px 40px;
+  text-align:center;padding:130px 20px 90px;
 }
 .hero-content-inner{max-width:900px;}
 .hero-badge{
@@ -195,7 +195,7 @@ header.nav.scrolled{padding:11px 0;box-shadow:0 10px 30px -14px rgba(61,43,31,.2
 /* ---------- MARQUEE ---------- */
 .marquee{
   background:var(--clay);color:var(--cream);height:52px;overflow:hidden;white-space:nowrap;
-  position:relative;z-index:5;
+  position:absolute;bottom:0;left:0;width:100%;z-index:3;
 }
 .marquee-track{display:inline-block;animation:scroll-m 65s linear infinite;padding-left:100%;}
 .marquee-track span{
@@ -490,7 +490,7 @@ body{padding-bottom:54px;}
   .about-gallery{grid-template-columns:1fr;}
   .about-gallery .g1,.about-gallery .g2,.about-gallery .g3{grid-row:auto;height:240px;}
 
-  .hero-content{padding:110px 20px 30px;justify-content:flex-start;}
+  .hero-content{padding:110px 20px 80px;justify-content:flex-start;}
   .hero-badge{font-size:.62rem;padding:7px 14px;line-height:1.4;white-space:normal;text-align:center;margin-bottom:20px;}
   .hero-content h1{font-size:1.9rem;line-height:1.25;margin-bottom:14px;}
   .hero-content p.sub{font-size:.95rem;margin-bottom:22px;}
