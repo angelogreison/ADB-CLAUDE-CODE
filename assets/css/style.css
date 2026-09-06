@@ -456,10 +456,11 @@ section{padding:110px 0;position:relative;}
 .test-card{
   background:var(--white);border:1px solid var(--border);border-radius:var(--radius);
   padding:32px 28px;transition:transform .5s var(--ease), box-shadow .4s;
+  display:flex;flex-direction:column;
 }
 .test-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px -20px rgba(61,43,31,.25);}
 .test-card .stars{color:var(--ochre);margin-bottom:14px;letter-spacing:2px;}
-.test-card blockquote{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.12rem;line-height:1.55;color:var(--ink);margin-bottom:22px;}
+.test-card blockquote{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.12rem;line-height:1.55;color:var(--ink);margin-bottom:22px;flex:1;}
 .test-author{display:flex;align-items:center;gap:12px;}
 .test-author img{width:44px;height:44px;border-radius:50%;object-fit:cover;}
 .test-author .name{font-size:.88rem;font-weight:700;color:var(--ink);}
