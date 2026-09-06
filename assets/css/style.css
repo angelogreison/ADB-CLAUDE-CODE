@@ -5,6 +5,7 @@
   --terracotta:#D27D56;
   --terracotta-light:#E2AB92;
   --clay:#B04A33;
+  --clay-dark:#8B3A28;
   --ink:#3D2B1F;
   --taupe:#695044;
   --olive:#8A9A5B;
@@ -63,8 +64,8 @@ img{max-width:100%;display:block;}
   cursor:pointer;border:none;
 }
 .btn svg{width:20px;height:20px;flex-shrink:0;}
-.btn-primary{background:var(--terracotta);color:var(--white);}
-.btn-primary:hover{background:var(--clay);transform:translateY(-3px);box-shadow:0 14px 30px -8px rgba(176,74,51,.45);}
+.btn-primary{background:var(--clay);color:var(--white);}
+.btn-primary:hover{background:var(--clay-dark);transform:translateY(-3px);box-shadow:0 14px 30px -8px rgba(176,74,51,.45);}
 .btn-outline{background:transparent;border:1.5px solid var(--terracotta);color:var(--clay);}
 .btn-outline:hover{background:var(--terracotta);color:var(--white);transform:translateY(-3px);}
 .btn-petroleum{background:var(--petroleum);color:var(--white);}
@@ -533,9 +534,11 @@ footer{background:var(--ink);color:var(--cream);padding:70px 0 26px;margin-top:a
 .sticky-cta a{display:flex;align-items:center;gap:8px;}
 body{padding-bottom:54px;}
 
-@media(max-width:980px){
+@media(max-width:1180px){
   .nav-links{display:none;}
   .burger{display:flex;}
+}
+@media(max-width:980px){
   .about-grid,.firing-grid,.loc-grid,.mariana-grid{grid-template-columns:1fr;gap:40px;}
   .mariana-photo{max-width:340px;margin:0 auto;}
   .why-grid,.services-grid{grid-template-columns:repeat(2,1fr);}

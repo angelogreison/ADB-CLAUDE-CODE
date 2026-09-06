@@ -1,3 +1,43 @@
+/* ---------- Deferred analytics (GA4 + Meta Pixel) ----------
+   Loaded on first user interaction, or after 4s if the visitor never
+   interacts, so short-lived bounce sessions still get counted while
+   the scripts stay out of the critical initial render path. */
+(function () {
+  var loaded = false;
+  var events = ['scroll', 'click', 'touchstart', 'mousemove', 'keydown'];
+
+  function loadAnalytics() {
+    if (loaded) return;
+    loaded = true;
+    clearTimeout(fallbackTimer);
+    events.forEach(function (evt) { window.removeEventListener(evt, loadAnalytics); });
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-9HD0M84T4R');
+    var gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-9HD0M84T4R';
+    document.head.appendChild(gtagScript);
+
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1002053692646882');
+    fbq('track', 'PageView');
+  }
+
+  var fallbackTimer = setTimeout(loadAnalytics, 4000);
+  events.forEach(function (evt) { window.addEventListener(evt, loadAnalytics, { passive: true }); });
+})();
+
 (function () {
   // Nav scroll state + sticky CTA, batched into one rAF-throttled scroll handler
   // to avoid multiple forced-reflow reads (getBoundingClientRect) per scroll event.
